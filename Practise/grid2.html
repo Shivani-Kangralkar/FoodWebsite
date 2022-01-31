@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Grid2</title>
+  </head>
+  <style>
+    .container {
+      display: grid;
+      grid-gap: 1rem;
+      grid-template-areas:
+        "navbar navbar navbar navbar"
+        "section section section aside "
+        "footer footer footer footer ";
+    }
+    @media only screen and (max-width: 300px) {
+      body {
+        background-color: red;
+      }
+      .container {
+        grid-template-areas:
+          "navbar navbar navbar navbar"
+          "section section section section "
+          "aside aside aside aside "
+          "footer footer footer footer ";
+      }
+
+      span {
+        display: block;
+        text-align: center;
+      }
+
+      aside {
+        display: none;
+      }
+    }
+
+    @media only screen and (min-width: 300px) and (max-width: 500px) {
+      body {
+        background-color: blue;
+      }
+      .container {
+        grid-template-areas:
+          "navbar navbar navbar navbar"
+          "section section section section "
+          "aside aside aside aside "
+          "footer footer footer footer ";
+      }
+
+      aside {
+        display: none;
+      }
+      span {
+        display: block;
+        text-align: center;
+      }
+    }
+
+    @media (min-width: 500px) and (max-width: 800px) {
+      body {
+        background-color: yellow;
+      }
+      .container {
+        grid-template-areas:
+          "navbar navbar navbar navbar"
+          "section section section section "
+          "aside aside aside aside "
+          "footer footer footer footer ";
+      }
+      span {
+        display: block;
+        text-align: center;
+      }
+    }
+
+    @media (min-width: 800px) {
+      body {
+        background-color: green;
+      }
+    }
+
+    .bg {
+      background-color: wheat;
+      padding: 10px 23px;
+      border: 2px solid black;
+      
+    }
+    nav {
+      grid-area: navbar;
+    }
+    section {
+      grid-area: section;
+    }
+    aside {
+      grid-area: aside;
+    }
+    footer {
+      grid-area: footer;
+      text-align: center;
+      
+    }
+  </style>
+  <body>
+    <div class="container">
+      <nav class="bg">
+        <span>Home</span>
+        <span>About</span>
+        <span>Service</span>
+        <span>Contact</span>
+      </nav>
+      <section class="bg">
+        <h2>learn CSS in Marathi</h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur quaerat ullam blanditiis nemo recusandae, inventore cum facilis assumenda aliquam numquam commodi autem placeat voluptate ratione delectus porro quibusdam! Doloremque temporibus, hic reprehenderit asperiores itaque, optio vel saepe repellat voluptatem numquam consequatur ducimus quasi delectus, perspiciatis cumque officiis magni est dignissimos dolore assumenda libero. At eaque libero earum et incidunt reiciendis quibusdam corrupti explicabo nulla! Autem voluptates reiciendis vel repellendus asperiores officia facere quia iure deleniti eveniet explicabo laudantium doloribus aliquam dolor accusantium modi, adipisci voluptas cumque tempora aliquid reprehenderit ducimus. Assumenda, eveniet unde atque officia sint molestias error nemo accusamus?
+      </section>
+      <aside class="bg">
+        <h1>know more about us</h1>
+      </aside>
+    </div>
+    <footer class="bg">Copyright with codewithharry</footer>
+  </body>
+</html>
